@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"/>
+    <link rel="stylesheet" href="style.css"/>
+    <title>Task 5</title>
+</head>
+
+<body>
+<h1
+        style="
+        color: #222;
+        padding: 10px;
+        margin-bottom: 20px;
+      "
+        class="text-center">Task 5
+</h1>
+
+<div class="container w-75">
+    <select
+            class="form-control mb-4"
+            lang="en"
+            onchange="reload()"
+            id="language"
+    >
+        <option>USA</option>
+        <option>Ukraine</option>
+        <option>Russia</option>
+    </select>
+    <input
+            type="text"
+            placeholder="Number of errors"
+            onchange="refresh()"
+            class="form-control mb-4"
+            lang="en"
+            id="erren"
+    />
+    <input
+            style="display: none"
+            onchange="refresh()"
+            type="text"
+            placeholder="Количество ошибок"
+            class="form-control mb-4"
+            lang="ru"
+            id="errru"
+    />
+    <input
+            style="display: none"
+            type="text"
+            onchange="refresh()"
+            placeholder="Кількість помилок"
+            class="form-control mb-4"
+            lang="uk"
+            id="erruk"
+    />
+    <input
+            type="text"
+            placeholder="Enter seed"
+            onchange="refresh()"
+            class="form-control mb-4"
+            lang="en"
+            id="seeden"
+    />
+    <input
+            style="display: none"
+            type="text"
+            onchange="refresh()"
+            placeholder="Укажите seed"
+            class="form-control"
+            lang="ru"
+            id="seedru"
+    />
+    <input
+            style="display: none"
+            type="text"
+            onchange="refresh()"
+            placeholder="Вкажіть seed"
+            class="form-control"
+            lang="uk"
+            id="seedby"
+    />
+    <input
+            class="btn btn-outline-success my-4 col-12"
+            type="button"
+            value="Get Data"
+            onclick="getData()"
+            lang="en"
+    />
+    <input
+            class="btn btn-outline-success my-4 col-12"
+            type="button"
+            value="Получить данные"
+            onclick="getData()"
+            lang="ru"
+            style="display: none"
+    />
+    <input
+            class="btn btn-outline-success my-4 col-12"
+            type="button"
+            value="Отримати дані"
+            onclick="getData()"
+            lang="uk"
+            style="display: none"
+    />
+    <table class="table table-striped table-light mt-5" id="table">
+        <thead class="bg-dark text-dark">
+        <tr lang="en">
+            <td class="bold" scope="col">Index</td>
+            <td class="bold" scope="col">Full Name</td>
+            <td class="bold" scope="col">Phone</td>
+            <td class="bold" scope="col">Id</td>
+            <td class="bold" scope="col">Address</td>
+            <td class="bold" scope="col">Email</td>
+        </tr>
+        </thead>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.js"></script>
+<script src="https://yunisdev.github.io/table2csv/table2csv.min.js"></script>
+<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
